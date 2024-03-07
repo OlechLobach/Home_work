@@ -9,7 +9,6 @@ namespace Home_work
             int[] A = new int[5];
             double[,] B = new double[3, 4];
 
-            // Fill array A with user input
             Console.WriteLine("Enter 5 integers separated by spaces:");
             string[] inputA = Console.ReadLine().Split(' ');
             for (int i = 0; i < 5; i++)
@@ -17,17 +16,15 @@ namespace Home_work
                 A[i] = int.Parse(inputA[i]);
             }
 
-            // Fill array B with random numbers
             Random random = new Random();
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    B[i, j] = random.NextDouble() * 100; // Generate a random double between 0 and 100
+                    B[i, j] = random.NextDouble() * 100; 
                 }
             }
 
-            // Display arrays A and B
             Console.WriteLine("Array A:");
             foreach (var item in A)
             {
@@ -43,7 +40,6 @@ namespace Home_work
                 Console.WriteLine();
             }
 
-            // Find max, min, sum, and product of elements in arrays A and B
             int maxA = A[0];
             int minA = A[0];
             int sumA = 0;
@@ -66,14 +62,12 @@ namespace Home_work
                 sumB += item;
             }
 
-            // Calculate sum of even elements in array A
             int sumEvenA = 0;
             foreach (var item in A)
             {
                 if (item % 2 == 0) sumEvenA += item;
             }
 
-            // Calculate sum of elements in odd columns of array B
             double sumOddColumnsB = 0;
             for (int j = 1; j < 4; j += 2)
             {
@@ -83,7 +77,6 @@ namespace Home_work
                 }
             }
 
-            // Display results
             Console.WriteLine("\nResults:");
             Console.WriteLine($"Max element in array A: {maxA}");
             Console.WriteLine($"Min element in array A: {minA}");
