@@ -2,7 +2,7 @@
 
 namespace Home_work
 {
-    class Home_work
+    class Program
     {
         static void Main()
         {
